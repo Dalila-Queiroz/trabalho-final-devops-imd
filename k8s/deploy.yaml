@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
       - name: container-app
-        image: dailqueiroz/devops-app: latest  
+        image: dailqueiroz/devops-app:latest  
         ports:
         - containerPort: 3000
-        # Monitoramento (Probes) - Recurso Extra
+        # Monitoramento (Probes)
         livenessProbe:
           httpGet:
             path: /health
