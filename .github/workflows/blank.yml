@@ -30,13 +30,13 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USER }}/devops-app:latest
 
-      # 5. Autenticar no Google Cloud 
+      # 5. Autenticar no Google Cloud
       - name: Autenticar no Google Cloud
         uses: google-github-actions/auth@v1
         with:
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
-      # 6. Conectar no Cluster GKE 
+      # 6. Conectar no Cluster GKE
       - name: Configurar GKE Credentials
         uses: google-github-actions/get-gke-credentials@v1
         with:
